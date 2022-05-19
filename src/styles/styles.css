@@ -4,8 +4,10 @@ red = ED1C24
 yellow = FFF200
 dark gray - 1D2B2A
 */
-
+a { color: #202D60; }
+a:hover { color: #ED1C24; }
 h1, h2, h3, h4, h5, h6 { font-family: 'Abril Fatface', serif; }
+.nav-pills .nav-link { display: flex; align-items: center; }
 
 .page-wrapper { display: grid; grid-template-columns: minmax(auto, 17.5rem) 1fr; }
 .nav-wrap { min-height: 100vh; }
@@ -20,6 +22,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abril Fatface', serif; }
 .container-fluid { max-width: 70rem; }
 
 .material-icons.md-48 { font-size: 3rem; }
+.material-icons.md-6 { font-size: 1.3rem; margin-right: 0.6rem; }
 
 .contact-info { display:inline-grid; grid-template-columns: auto 1fr; column-gap:0.75rem; }
 
