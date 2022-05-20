@@ -4,13 +4,29 @@ red = ED1C24
 yellow = FFF200
 dark gray - 1D2B2A
 */
-a { color: #202D60; }
-a:hover { color: #ED1C24; }
+:root {
+  --dark-blue-color: #202D60;
+  --red-color: #ED1C24;
+  --yellow-color: #FFF200;
+  --dark-gray-color: #1D2B2A;
+}
+a { color: var(--dark-blue-color); }
+a:hover { color: var(--red-color); }
 h1, h2, h3, h4, h5, h6 { font-family: 'Abril Fatface', serif; }
+
+.btn-outline-primary { color: var(--dark-blue-color); border-color: var(--dark-blue-color); }
+.btn-outline-primary:hover,
+.btn-outline-primary:focus { background-color: var(--dark-blue-color); border-color: var(--dark-blue-color); }
+
 .nav-pills .nav-link { display: flex; align-items: center; }
 
 .page-wrapper { display: grid; grid-template-columns: minmax(auto, 17.5rem) 1fr; }
 .nav-wrap { min-height: 100vh; }
+.navbar-toggler { display: none; }
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link { background-color: var(--dark-blue-color); }
+.nav-pills .link-dark:focus, 
+.nav-pills .link-dark:hover { background-color: rgba(29, 43, 42, 0.1);}
 
 .content-container { display: flex; flex-direction: column;
 	flex-wrap: nowrap;
@@ -25,6 +41,24 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abril Fatface', serif; }
 .material-icons.md-6 { font-size: 1.3rem; margin-right: 0.6rem; }
 
 .contact-info { display:inline-grid; grid-template-columns: auto 1fr; column-gap:0.75rem; }
+.contact-info .material-icons { color: var(--dark-blue-color); }
 
 #footer p { font-size:0.8rem; }
 	#footer p a { color: #FFF; text-decoration: underline; }
+
+@media (min-width: 768px) {
+	.navbar-expand-md .navbar-collapse { display: block !important;}
+}
+@media (max-width:768px) {
+	.navbar-toggler { display: block; }
+	.page-wrapper { display: block; }
+	.nav-wrap { min-height: auto; }
+	.logo_cont { width: 50%; }
+		.logo_cont svg { width: 100%; }
+	.nav-wrap hr { display: none; }
+	.mobile_nav_wrapper { display: flex; align-content: center; justify-content: space-between; align-items: center;}
+	.us-content { margin: 2rem 0.5rem; }
+}
+@media (max-width:550px) {
+	.logo_cont { width: 65%; }
+}
